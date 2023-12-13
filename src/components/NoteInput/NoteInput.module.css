@@ -1,0 +1,56 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.noteInputPage {
+  height: 100vh;
+  width: 75vw;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title {
+  /* border: 2px solid black; */
+  background-color: #001f8b;
+  height: 7vh;
+}
+.title_name {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.textar {
+  width: 70vw;
+  height: 20vh;
+  padding: 1rem;
+  /* border: 2px solid black; */
+  background-color: #001f8b;
+  position: relative;
+}
+.textar textarea {
+  width: 69vw;
+  height: 18vh;
+  font-size: 20px;
+  outline: none;
+}
+.textar img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 6vh;
+  bottom: 4vh;
+}
+
+.note_box {
+  height: 72vh;
+  overflow-y: auto;
+}
+.note_box_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
