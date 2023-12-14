@@ -74,7 +74,7 @@ function Mainpage() {
                     className={styles.logo}
                     style={{ backgroundColor: group.color }}
                   >
-                    <span>{noteLogo(group.name).logo}</span>
+                    {noteLogo(group.name).logo}
                   </span>
                   {group.name}
                 </div>
@@ -82,7 +82,7 @@ function Mainpage() {
             </div>
           ))}
           <button className={styles.add_note_button} onClick={handleOpen}>
-            <h4 style={{ fontSize: "40px" }}>+</h4>
+            {/* <h4 style={{ fontSize: "40px" }}>+</h4> */}+
           </button>
         </div>
 

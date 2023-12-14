@@ -39,21 +39,25 @@ body {
 .note_title_section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .add_note_button {
   background-color: #16008b;
   border-radius: 50%;
   margin: 2rem;
-  height: 5rem;
-  width: 5rem;
-  position: sticky;
-  bottom: 10px;
+  /* height: 10vh; */
+  /* width: 3vw; */
+  /* height: 5rem; */
+  /* width: 5rem; */
+  position: fixed;
+  bottom: 2px;
   align-self: self-end;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 30px;
 }
 
 .logo {
@@ -74,6 +78,7 @@ body {
   margin: 1rem;
   display: flex;
   align-items: center;
+
   font-weight: 600;
 }
 
