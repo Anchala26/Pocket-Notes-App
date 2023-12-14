@@ -136,4 +136,9 @@ body {
   .main_screen {
     display: none;
   }
+   .add_note_button {
+    position: fixed;
+    right: 1px;
+    width: 3vw;
+  }
 }
