@@ -1,5 +1,6 @@
 .note_content {
-  /* border: 2px solid rgb(228, 3, 3); */
+  border: 2px solid rgb(176, 170, 170);
+  box-shadow: 0px 4px 20px 0px #00000040;
 
   margin: 10px;
   background-color: white;
@@ -17,11 +18,18 @@
   justify-content: end;
 }
 .date {
-  border: 2px solid green;
+  /* border: 2px solid green; */
+  margin: 10px;
+  font-weight: 600;
+  font-size: 13px;
 }
 .time {
   /* border: 2px solid yellow; */
   margin: 10px;
   font-weight: 600;
   font-size: 13px;
+}
+.date_time span {
+  font-weight: 1000;
+  /* border: 2px solid black; */
 }

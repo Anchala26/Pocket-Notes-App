@@ -58,15 +58,15 @@ body {
 
 .logo {
   border-radius: 50%;
-  width: 3vw;
-  height: 3vw;
+  /* width: 3vw; */
+  /* height: 3vw; */
   margin: 0px 15px;
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  padding: 0.5rem;
+  padding: 0.5rem 0.7rem;
 }
 .title {
   /* border: 2px solid black; */
@@ -117,4 +117,18 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .main_page {
+    flex-direction: column;
+  }
+
+  .note_title_section {
+    width: 100%;
+  }
+
+  .main_screen {
+    display: none;
+  }
 }

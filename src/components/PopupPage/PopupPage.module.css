@@ -46,3 +46,11 @@
   font-weight: 700;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+@media (max-width: 768px) {
+  .popupdiv {
+    position: fixed;
+    top: 25vh;
+    left: 1px;
+  }
+}

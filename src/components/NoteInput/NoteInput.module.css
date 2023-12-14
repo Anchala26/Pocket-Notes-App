@@ -13,7 +13,7 @@ body {
 .title {
   /* border: 2px solid black; */
   background-color: #001f8b;
-  height: 7vh;
+  height: 8vh;
 }
 .title_name {
   color: white;
@@ -23,6 +23,7 @@ body {
 }
 .textar {
   width: 70vw;
+  max-width: 80vw;
   height: 20vh;
   padding: 1rem;
   /* border: 2px solid black; */
@@ -30,8 +31,10 @@ body {
   position: relative;
 }
 .textar textarea {
-  width: 69vw;
-  height: 18vh;
+  /* width: 69vw; */
+  /* height: 18vh; */
+  width: 100%;
+  height: 100%;
   font-size: 20px;
   outline: none;
 }
@@ -39,8 +42,8 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  position: absolute;
-  right: 6vh;
+  position: fixed;
+  right: 4vh;
   bottom: 4vh;
 }
 
@@ -53,4 +56,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
   /* border: 2px solid red; */
+}
+
+@media (max-width: 768px) {
+  .noteInputPage {
+    width: 100vw;
+  }
+  .textar {
+    width: 92vw;
+    max-width: none;
+  }
+  .textar textarea {
+    /* width: 90vw; */
+    width: 100%;
+  }
 }

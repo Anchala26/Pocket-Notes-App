@@ -5,6 +5,7 @@ import styles from "./Mainpage.module.css";
 import PopupPage from "../PopupPage/PopupPage";
 import { noteLogo } from "../Function Files/utils";
 import NoteInput from "../NoteInput/NoteInput";
+import { useScreen } from "../Function Files/useScreen.js";
 
 function Mainpage() {
   const [showPopup, setShowPopup] = useState(false);
@@ -12,6 +13,8 @@ function Mainpage() {
   const [showInput, setShowInput] = useState(false);
   const [selectedTitle, setSelectedTitle] = useState(null);
   const [selectedGroupNotes, setSelectedGroupNotes] = useState([]);
+  const { isMobile } = useScreen();
+  console.log("isMobile", isMobile);
 
   const handleOpen = () => {
     console.log("open");
@@ -30,7 +33,13 @@ function Mainpage() {
   };
 
   const handleTitleClick = (index) => {
-    setSelectedTitle(index === selectedTitle ? null : index);
+    console.log("handleTitleClick", index);
+    if (isMobile) {
+      setSelectedTitle(index === selectedTitle ? null : index);
+      setShowInput(true);
+    } else {
+      setSelectedTitle(index === selectedTitle ? null : index);
+    }
   };
 
   const handleNoteAdded = (newNote) => {
@@ -77,28 +86,35 @@ function Mainpage() {
           </button>
         </div>
 
-        <div className={styles.main_screen}>
-          {!selectedTitle ? (
-            <>
-              <img src={home} alt="home" style={{ width: "30rem" }} />
+        {isMobile && selectedTitle !== null ? (
+          <NoteInput
+            selectedGroup={existingData[selectedTitle]}
+            onNoteAdded={handleNoteAdded}
+          />
+        ) : (
+          <div className={styles.main_screen}>
+            {!selectedTitle ? (
+              <>
+                <img src={home} alt="home" style={{ width: "30rem" }} />
 
-              <h1>Pocket Notes</h1>
-              <p>
-                Send and receive messages without keeping your phone online. Use
-                Pocket Notes on up to 4 linked devices and 1 mobile phone
-              </p>
-              <div className={styles.footer}>
-                <img src={lock} alt="lock" style={{ width: "10px" }} />
-                <span> end-to-end encrypted</span>
-              </div>
-            </>
-          ) : (
-            <NoteInput
-              selectedGroup={existingData[selectedTitle]}
-              onNoteAdded={handleNoteAdded}
-            />
-          )}
-        </div>
+                <h1>Pocket Notes</h1>
+                <p>
+                  Send and receive messages without keeping your phone online.
+                  Use Pocket Notes on up to 4 linked devices and 1 mobile phone
+                </p>
+                <div className={styles.footer}>
+                  <img src={lock} alt="lock" style={{ width: "10px" }} />
+                  <span> end-to-end encrypted</span>
+                </div>
+              </>
+            ) : (
+              <NoteInput
+                selectedGroup={existingData[selectedTitle]}
+                onNoteAdded={handleNoteAdded}
+              />
+            )}
+          </div>
+        )}
       </div>
       {showPopup && (
         <div className={styles.overlay}>

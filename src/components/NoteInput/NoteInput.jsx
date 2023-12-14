@@ -47,7 +47,8 @@ function NoteInput({ selectedGroup, onNoteAdded }) {
       <div className={styles.title}>
         {selectedGroup && selectedGroup.logo && (
           <div style={{ backgroundColor: selectedGroup.color }}>
-            {selectedGroup.logo}
+            {/* {console.log("selectedGroup:", selectedGroup)} */}
+            <span>{noteLogo(selectedGroup.name).logo}</span>
           </div>
         )}
         <div className={styles.title_name}>{selectedGroup.name}</div>

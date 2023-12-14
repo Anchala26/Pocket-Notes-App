@@ -10,7 +10,8 @@ function AllNotes({ noteObj }) {
         <div>{noteObj.content}</div>
       </div>
       <div className={styles.date_time}>
-        <div className={styles.Date}>{noteObj.date}</div>
+        <div className={styles.date}>{noteObj.Date}</div>
+        <span> . </span>
         <div className={styles.time}>{noteObj.time}</div>
       </div>
     </div>
