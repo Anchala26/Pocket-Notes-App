@@ -93,7 +93,7 @@ function Mainpage() {
           />
         ) : (
           <div className={styles.main_screen}>
-            {!selectedTitle ? (
+            {selectedTitle == null ? (
               <>
                 <img src={home} alt="home" style={{ width: "30rem" }} />
 
